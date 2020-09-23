@@ -117,15 +117,15 @@
       <TextField fx:id="txt_light_change_time" layoutX="624.0" layoutY="90.0" prefHeight="26.0" prefWidth="40.0" text="10" />
       <TextField fx:id="txt_crossing_time" layoutX="624.0" layoutY="158.0" prefHeight="26.0" prefWidth="40.0" text="0.3" />
       <Label layoutX="303.0" layoutY="64.0" text="Distribución de llegada de vehículos" />
-      <Label layoutX="907.0" layoutY="156.0" text="Glosario de Estados">
+      <Label layoutX="899.0" layoutY="156.0" text="Glosario de Estados">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
       <Label layoutX="891.0" layoutY="176.0" text="PX: Parado en semáforo X" />
-      <Label layoutX="892.0" layoutY="196.0" text="CX: Cruzando semáforo X" />
+      <Label layoutX="891.0" layoutY="196.0" text="CX: Cruzando semáforo X" />
       <Label layoutX="891.0" layoutY="219.0" text="PY: Parado en semáforo Y" />
-      <Label layoutX="1099.0" layoutY="156.0" text="Eventos">
+      <Label layoutX="1078.0" layoutY="156.0" text="Eventos">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -144,6 +144,6 @@
       <Label layoutX="1188.0" layoutY="122.0" text="Semaforo X { Verde / Rojo} " />
       <Label layoutX="1189.0" layoutY="139.0" text="Semaforo Y { Verde / Rojo} " />
       <Label layoutX="1189.0" layoutY="86.0" text="Taxi { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
-      <Label layoutX="1190.0" layoutY="105.0" text="Bus { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
+      <Label layoutX="1190.0" layoutY="105.0" text="Colectivo { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
    </Pane>
 </GridPane>

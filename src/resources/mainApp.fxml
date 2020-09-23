@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" hgap="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1700.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller">
+<GridPane alignment="CENTER" hgap="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1700.0" vgap="10.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -122,8 +122,26 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="892.0" layoutY="187.0" text="PX: Parado en semáforo X" />
-      <Label layoutX="892.0" layoutY="207.0" text="CX: Cruzando semáforo X" />
-      <Label layoutX="892.0" layoutY="227.0" text="PY: Parado en semáforo Y" />
+      <Label layoutX="891.0" layoutY="176.0" text="PX: Parado en semáforo X" />
+      <Label layoutX="892.0" layoutY="196.0" text="CX: Cruzando semáforo X" />
+      <Label layoutX="891.0" layoutY="219.0" text="PY: Parado en semáforo Y" />
+      <Label layoutX="1099.0" layoutY="156.0" text="Eventos">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1075.0" layoutY="175.0" text="Llegada particular" />
+      <Label layoutX="1078.0" layoutY="196.0" text="Llegada taxi" />
+      <Label layoutX="1078.0" layoutY="219.0" text="Llegada bus" />
+      <Label layoutX="1190.0" layoutY="176.0" text="Cambio de semáforo" />
+      <Label layoutX="1190.0" layoutY="196.0" text="Fin de cruce" />
+      <Label layoutX="1199.0" layoutY="54.0" text="Objetos">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1190.0" layoutY="73.0" text="Vehículo { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
+      <Label layoutX="1190.0" layoutY="94.0" text="Semaforo X { Verde / Rojo} " />
+      <Label layoutX="1190.0" layoutY="117.0" text="Semaforo Y { Verde / Rojo} " />
    </Pane>
 </GridPane>

@@ -135,13 +135,15 @@
       <Label layoutX="1078.0" layoutY="219.0" text="Llegada bus" />
       <Label layoutX="1190.0" layoutY="176.0" text="Cambio de semáforo" />
       <Label layoutX="1190.0" layoutY="196.0" text="Fin de cruce" />
-      <Label layoutX="1199.0" layoutY="54.0" text="Objetos">
+      <Label layoutX="1198.0" layoutY="52.0" text="Objetos">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="1190.0" layoutY="73.0" text="Vehículo { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
-      <Label layoutX="1190.0" layoutY="94.0" text="Semaforo X { Verde / Rojo} " />
-      <Label layoutX="1190.0" layoutY="117.0" text="Semaforo Y { Verde / Rojo} " />
+      <Label layoutX="1190.0" layoutY="68.0" text="Particular { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
+      <Label layoutX="1188.0" layoutY="122.0" text="Semaforo X { Verde / Rojo} " />
+      <Label layoutX="1189.0" layoutY="139.0" text="Semaforo Y { Verde / Rojo} " />
+      <Label layoutX="1189.0" layoutY="86.0" text="Taxi { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
+      <Label layoutX="1190.0" layoutY="105.0" text="Bus { PX: Parado en semáforo X / PY: Parado en semáforo Y / CX: Cruzando semáforo X}" />
    </Pane>
 </GridPane>

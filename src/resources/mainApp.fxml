@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1700.0" vgap="10.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1700.0">
+      <Label layoutX="28.0" layoutY="78.0" prefHeight="58.0" prefWidth="116.0" text="Tiempo de simulación (minutos)" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="28.0" layoutY="130.0" prefHeight="71.0" prefWidth="90.0" text="Iteraciones a mostrar" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="365.0" layoutY="94.0" text="Llegada Particular" />
+      <Label layoutX="366.0" layoutY="135.0" text="Llegada Taxi" />
+      <Label layoutX="365.0" layoutY="175.0" text="Llegada Colectivo" />
+      <TextField fx:id="txt_simulation_time" layoutX="150.0" layoutY="87.0" prefHeight="31.0" prefWidth="116.0" text="3600" />
+      <TextField fx:id="txt_iteration_to" layoutX="211.0" layoutY="153.0" prefHeight="31.0" prefWidth="56.0" text="50" />
+      <TextField fx:id="txt_minute_from" layoutX="147.0" layoutY="153.0" prefHeight="31.0" prefWidth="56.0" text="10" />
+      <TextField fx:id="txt_bus_media" layoutX="512.0" layoutY="171.0" prefHeight="26.0" prefWidth="38.0" text="7" />
+      <TextField fx:id="txt_taxi_media" layoutX="510.0" layoutY="127.0" prefHeight="26.0" prefWidth="39.0" text="2" />
+      <TextField fx:id="txt_particular_media" layoutX="509.0" layoutY="87.0" prefHeight="26.0" prefWidth="40.0" text="1" />
+      <Separator layoutX="-7.0" layoutY="42.0" prefHeight="4.0" prefWidth="1601.0" />
+      <Button fx:id="btn_start_simulation" layoutX="57.0" layoutY="215.0" mnemonicParsing="false" onAction="#onSimulate" prefHeight="0.0" prefWidth="102.0" text="Simular!">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="907.0" layoutY="52.0" text="Resultados de la Simulación">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="887.0" layoutY="79.0" text="Porcentaje de bloqueos por semáforo Y ocupado" />
+      <TextField fx:id="txt_blocked_crossing_percentage" disable="true" layoutX="896.0" layoutY="105.0" prefHeight="26.0" prefWidth="64.0" />
+      <Separator layoutX="850.0" layoutY="44.0" orientation="VERTICAL" prefHeight="228.0" prefWidth="2.0" />
+      <Label layoutX="62.0" layoutY="51.0" text="Parámetros">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="67.0" text="Media">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="615.0" layoutY="132.0" text="Tiempo de cruce (minutos)">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_reset_data" layoutX="494.0" layoutY="220.0" mnemonicParsing="false" onAction="#onRestart" prefHeight="30.0" prefWidth="142.0" text="Reiniciar parámetros" />
+      <Label fx:id="lbl_error" layoutX="20.0" layoutY="867.0" prefHeight="39.0" prefWidth="1314.0" textFill="#cf5800" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="14.0" text="Simulación - Final - UTN FRC" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="20.0" layoutY="280.0" prefHeight="577.0" prefWidth="1657.0">
+         <TableView fx:id="tv_queue" prefHeight="573.0" prefWidth="1653.0" tableMenuButtonVisible="true">
+            <columns>
+               <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Iteración" />
+               <TableColumn editable="false" prefWidth="112.0" text="Tiempo (minutos)" />
+               <TableColumn editable="false" prefWidth="344.0" sortable="false" text="Evento" />
+               <TableColumn editable="false" prefWidth="94.0" sortable="false" text="RND Vehículo dobló" />
+               <TableColumn editable="false" prefWidth="94.0" sortable="false" text="Vehículo dobló" />
+               <TableColumn editable="false" prefWidth="50.0" sortable="false" text="RND particular" />
+               <TableColumn editable="false" prefWidth="138.0" sortable="false" text="Tiempo entre llegadas" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Próxima llegada particular" />
+               <TableColumn editable="false" prefWidth="99.0" sortable="false" text="RND Carril taxi" />
+               <TableColumn editable="false" prefWidth="118.0" sortable="false" text="Carril próximo taxi" />
+               <TableColumn editable="false" prefWidth="50.0" sortable="false" text="RND taxi" />
+               <TableColumn editable="false" prefWidth="135.0" sortable="false" text="Tiempo entre llegadas" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Próxima llegada taxi" />
+               <TableColumn editable="false" prefWidth="50.0" sortable="false" text="RND bus" />
+               <TableColumn editable="false" prefWidth="256.0" sortable="false" text="Tiempo entre llegadas" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Próxima llegada colectivo" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Próximo cambio Semáforo" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Particulares en Y" />
+               <TableColumn editable="false" prefWidth="120.0" sortable="false" text="Taxis en Y" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Colectivos en Y" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Cola X Derecha" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Cola X Izquierda" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Estado Semáforo X" />
+               <TableColumn editable="false" prefWidth="120.0" sortable="false" text="Cola Y" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Estado Semáforo Y" />
+               <TableColumn editable="false" prefWidth="256.0" sortable="false" text="Contador cambios de semáforo" />
+               <TableColumn editable="false" prefWidth="169.0" sortable="false" text="Contador bloqueos en Y" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+      </ScrollPane>
+      <Label layoutX="614.0" layoutY="67.0" text="Tiempo de cambio de estado de semáforos (minutos)">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="133.0" text="Min desde">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="215.0" layoutY="133.0" text="Iteraciones">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_light_change_time" layoutX="624.0" layoutY="90.0" prefHeight="26.0" prefWidth="40.0" text="10" />
+      <TextField fx:id="txt_crossing_time" layoutX="624.0" layoutY="158.0" prefHeight="26.0" prefWidth="40.0" text="0.3" />
+      <Label layoutX="303.0" layoutY="64.0" text="Distribución de llegada de vehículos" />
+      <Label layoutX="907.0" layoutY="156.0" text="Glosario de Estados">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="892.0" layoutY="187.0" text="PX: Parado en semáforo X" />
+      <Label layoutX="892.0" layoutY="207.0" text="CX: Cruzando semáforo X" />
+      <Label layoutX="892.0" layoutY="227.0" text="PY: Parado en semáforo Y" />
+   </Pane>
+</GridPane>
